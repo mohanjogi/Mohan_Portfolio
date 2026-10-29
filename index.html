@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogi Mohan Krishna | AI & Full-Stack Software Developer</title>
+  <meta name="description" content="Portfolio of Jogi Mohan Krishna - Computer Science Graduate, Software Developer, AI/ML & Full-Stack Engineer specializing in RAG systems, Deep Learning, and React.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Custom Cursor Elements -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-text">JMK</span>
+        <span class="logo-bracket">/&gt;</span>
+        <span class="status-indicator" title="Available for Opportunities"></span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link"><span class="nav-num">01.</span> About</a>
+        <a href="#skills" class="nav-link"><span class="nav-num">02.</span> Skills</a>
+        <a href="#projects" class="nav-link"><span class="nav-num">03.</span> Projects</a>
+        <a href="#interactive-demo" class="nav-link"><span class="nav-num">04.</span> Live Demo</a>
+        <a href="#experience" class="nav-link"><span class="nav-num">05.</span> Journey</a>
+        <a href="#contact" class="nav-link"><span class="nav-num">06.</span> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Audio FX Toggle -->
+        <button id="sound-toggle" class="icon-btn" title="Toggle Futuristic Sound FX" aria-label="Toggle Sound">
+          <svg class="sound-icon sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <svg class="sound-icon sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </button>
+
+        <!-- Resume Download CTA -->
+        <a href="#contact" class="btn btn-outline nav-cta">Let's Talk</a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about" class="mobile-link"><span>01.</span> About</a>
+    <a href="#skills" class="mobile-link"><span>02.</span> Skills</a>
+    <a href="#projects" class="mobile-link"><span>03.</span> Projects</a>
+    <a href="#interactive-demo" class="mobile-link"><span>04.</span> Live Demo</a>
+    <a href="#experience" class="mobile-link"><span>05.</span> Experience & Education</a>
+    <a href="#contact" class="mobile-link"><span>06.</span> Contact</a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge hero-badge">
+            <span class="badge-pulse"></span>
+            <span class="badge-text">Available for Entry-Level Software Developer Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="gradient-text hero-name">Jogi Mohan Krishna</span>
+          </h1>
+
+          <div class="hero-typewriter-container">
+            <span class="type-prefix">I build </span>
+            <span class="type-dynamic" id="typewriter"></span>
+            <span class="type-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Computer Science graduate with hands-on expertise building 
+            <strong class="highlight">AI-powered applications</strong>, 
+            <strong class="highlight">Retrieval-Augmented Generation (RAG)</strong> systems, and 
+            <strong class="highlight">full-stack web platforms</strong> with Python, React, and modern databases.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary magnet-btn">
+              <span>Explore Projects</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+              </svg>
+            </a>
+            <a href="#interactive-demo" class="btn btn-secondary magnet-btn">
+              <span class="sparkle-icon">✨</span>
+              <span>Try Interactive Demo</span>
+            </a>
+            <a href="mailto:mohankrishnajogi123@gmail.com" class="btn btn-ghost magnet-btn">
+              <span>Get In Touch</span>
+            </a>
+          </div>
+
+          <!-- Quick Metric Highlights -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span class="stat-num" data-target="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Full-Stack & AI Projects</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-num" data-target="743">0</span><span class="stat-suffix">/10</span>
+              <span class="stat-label">B.Tech CGPA</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-card">
+              <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+              <span class="stat-label">Production Mindset</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3D Floating Interactive Hero Graphic with Portrait -->
+        <div class="hero-visual">
+          <div class="hero-card-3d" id="hero-3d-card">
+            
+            <!-- Futuristic Profile Portrait Section -->
+            <div class="hero-portrait-section">
+              <div class="portrait-halo"></div>
+              
+              <div class="portrait-frame">
+                <img src="mohan.jpg" alt="Jogi Mohan Krishna - Computer Science Graduate & Software Developer" class="hero-portrait-img">
+                
+                <!-- HUD Cyber Corner Brackets -->
+                <div class="hud-corner hud-tl"></div>
+                <div class="hud-corner hud-tr"></div>
+                <div class="hud-corner hud-bl"></div>
+                <div class="hud-corner hud-br"></div>
+                
+                <!-- Live Status Pill on Portrait -->
+                <div class="portrait-status-pill">
+                  <span class="status-live-dot"></span>
+                  <span>Ready to Join</span>
+                </div>
+              </div>
+
+              <div class="portrait-meta-box">
+                <div class="portrait-name-line">
+                  <h3 class="portrait-card-name">Jogi Mohan Krishna</h3>
+                  <span class="verified-icon" title="Verified Software Developer">✓</span>
+                </div>
+                <p class="portrait-card-role">AI Engineer & Full-Stack Developer</p>
+                <div class="portrait-spec-chips">
+                  <span>Python</span>
+                  <span>React</span>
+                  <span>RAG</span>
+                  <span>Deep Learning</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="code-window-header">
+              <div class="window-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="window-title">mohan_profile.py</div>
+              <div class="window-badge">Active Session</div>
+            </div>
+
+            <div class="code-window-body">
+              <pre><code class="python-code"><span class="code-keyword">class</span> <span class="code-class">SoftwareDeveloper</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(self):
+        self.name = <span class="code-str">"Jogi Mohan Krishna"</span>
+        self.degree = <span class="code-str">"B.Tech in CSE (2022-2026)"</span>
+        self.core_stack = [
+            <span class="code-str">"Python"</span>, <span class="code-str">"React"</span>, <span class="code-str">"LangChain"</span>,
+            <span class="code-str">"RAG Architecture"</span>, <span class="code-str">"FAISS"</span>, <span class="code-str">"MySQL"</span>
+        ]
+        self.focus = <span class="code-str">"AI Engineering & Full-Stack"</span>
+        self.passion = <span class="code-str">"Solving Real-World Problems"</span>
+
+    <span class="code-keyword">def</span> <span class="code-func">deploy_solution</span>(self, challenge):
+        <span class="code-keyword">return</span> f<span class="code-str">"Delivered with robust quality: {challenge}"</span></code></pre>
+            </div>
+
+            <!-- Floating Orbital Tech Badges -->
+            <div class="orbital-pill pill-rag" style="--float-delay: 0s;">
+              <span class="orbital-icon">⚡</span>
+              <span>RAG & Vector Search</span>
+            </div>
+            <div class="orbital-pill pill-python" style="--float-delay: 1.2s;">
+              <span class="orbital-icon">🐍</span>
+              <span>Python & Deep Learning</span>
+            </div>
+            <div class="orbital-pill pill-react" style="--float-delay: 2.4s;">
+              <span class="orbital-icon">⚛️</span>
+              <span>React & Modern Web</span>
+            </div>
+            <div class="orbital-pill pill-gemini" style="--float-delay: 3.6s;">
+              <span class="orbital-icon">✨</span>
+              <span>LLM Orchestration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to about section">
+        <span class="mouse-icon">
+          <span class="wheel"></span>
+        </span>
+        <span class="scroll-text">Scroll Down</span>
+      </a>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01. Overview</span>
+          <h2 class="section-title">About <span class="gradient-text">My Journey</span></h2>
+          <p class="section-subtitle">Bridging Machine Learning research with practical full-stack software development.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-bio-card tilt-card">
+            <div class="about-profile-header">
+              <div class="about-avatar-box">
+                <img src="mohan.jpg" alt="Jogi Mohan Krishna" class="about-avatar-photo">
+                <span class="about-avatar-glow"></span>
+              </div>
+              <div class="about-avatar-text">
+                <h3 class="about-profile-name">Jogi Mohan Krishna</h3>
+                <span class="about-profile-tag">Computer Science Graduate | Software Developer</span>
+                <span class="about-profile-loc">📍 Machilipatnam, Andhra Pradesh</span>
+              </div>
+            </div>
+
+            <h4 class="card-heading">
+              <span class="heading-icon">🚀</span>
+              Engineer at the Intersection of AI & Full-Stack
+            </h4>
+            <p>
+              I am a dedicated Computer Science graduate from <strong>Sri Vasavi Institute of Engineering & Technology</strong>. My passion revolves around architecting intelligent systems—from training deep learning pipelines (CNNs and Bi-LSTMs) for biomedical signal prediction to building low-latency, retrieval-augmented enterprise applications.
+            </p>
+            <p>
+              Having worked as an <strong>AI Annotation Specialist Intern at Student Tribe</strong>, I understand how data cleanliness, prompt reliability, and robust data workflows directly impact model convergence and enterprise reliability.
+            </p>
+
+            <div class="about-highlights-list">
+              <div class="highlight-item">
+                <div class="highlight-icon">🎯</div>
+                <div>
+                  <strong>Problem Solver:</strong> Strong grasp of Data Structures, Object-Oriented Programming, and clean architectural design patterns.
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🧠</div>
+                <div>
+                  <strong>AI & LLM Grounding:</strong> Hands-on experience developing multi-format vector retrieval systems with strict hallucination controls.
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">⚡</div>
+                <div>
+                  <strong>End-to-End Delivery:</strong> Proficient from frontend React interfaces and REST API endpoints down to MySQL relational schemas.
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-pills">
+              <div class="pill-info">
+                <span class="pill-label">Location:</span>
+                <span class="pill-val">Machilipatnam, Andhra Pradesh</span>
+              </div>
+              <div class="pill-info">
+                <span class="pill-label">Education:</span>
+                <span class="pill-val">B.Tech CSE (2022 – 2026)</span>
+              </div>
+              <div class="pill-info">
+                <span class="pill-label">Status:</span>
+                <span class="pill-val pill-status-open">Open to Relocation & Remote</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Trait Cards Grid -->
+          <div class="traits-container">
+            <div class="trait-card tilt-card">
+              <div class="trait-icon-box">🧠</div>
+              <h4 class="trait-title">AI & Deep Learning</h4>
+              <p class="trait-desc">Spatial & temporal sequence feature extraction using CNN & Bi-LSTM architectures for EEG biosignal processing.</p>
+              <div class="trait-tags">
+                <span>PyTorch / TF</span>
+                <span>Signal Preprocessing</span>
+                <span>EEG Analysis</span>
+              </div>
+            </div>
+
+            <div class="trait-card tilt-card">
+              <div class="trait-icon-box">🔍</div>
+              <h4 class="trait-title">RAG & Vector Search</h4>
+              <p class="trait-desc">Vector indexing using FAISS, LangChain chains, multi-document chunking, and strict grounding citations.</p>
+              <div class="trait-tags">
+                <span>FAISS</span>
+                <span>all-MiniLM-L6-v2</span>
+                <span>Strict Grounding</span>
+              </div>
+            </div>
+
+            <div class="trait-card tilt-card">
+              <div class="trait-icon-box">🌐</div>
+              <h4 class="trait-title">Full-Stack Development</h4>
+              <p class="trait-desc">Responsive UIs in React, RESTful backend services in Python & Node.js, and structured relational queries in MySQL.</p>
+              <div class="trait-tags">
+                <span>React.js</span>
+                <span>REST APIs</span>
+                <span>MySQL CRUD</span>
+              </div>
+            </div>
+
+            <div class="trait-card tilt-card">
+              <div class="trait-icon-box">🔄</div>
+              <h4 class="trait-title">Data & Quality Operations</h4>
+              <p class="trait-desc">Rigorous dataset validation, bias identification, and multi-modal annotation (audio, video, text, image) for model readiness.</p>
+              <div class="trait-tags">
+                <span>Data Quality</span>
+                <span>Error Audit</span>
+                <span>SDLC Methodologies</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS MATRIX SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02. Tech Stack</span>
+          <h2 class="section-title">Technical <span class="gradient-text">Proficiencies</span></h2>
+          <p class="section-subtitle">Categorized skills honed through academic rigor and production projects.</p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="skills-filter-tabs">
+          <button class="skill-tab active" data-category="all">All Technologies</button>
+          <button class="skill-tab" data-category="ai">AI / Machine Learning</button>
+          <button class="skill-tab" data-category="programming">Programming & Core</button>
+          <button class="skill-tab" data-category="web">Web & Backend</button>
+          <button class="skill-tab" data-category="tools">Tools & Databases</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- Python -->
+          <div class="skill-card tilt-card" data-category="programming">
+            <div class="skill-icon">🐍</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 90%;"></div></div>
+              <span class="skill-detail">Core logic, ML pipelines, RAG backends, data preprocessing</span>
+            </div>
+          </div>
+
+          <!-- RAG & Vector Search -->
+          <div class="skill-card tilt-card" data-category="ai">
+            <div class="skill-icon">⚡</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">RAG & Vector Embeddings</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 88%;"></div></div>
+              <span class="skill-detail">FAISS index, all-MiniLM-L6-v2, multi-format doc parsing</span>
+            </div>
+          </div>
+
+          <!-- Deep Learning (CNN & Bi-LSTM) -->
+          <div class="skill-card tilt-card" data-category="ai">
+            <div class="skill-icon">🧠</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Deep Learning (CNN & Bi-LSTM)</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 85%;"></div></div>
+              <span class="skill-detail">Spatial & temporal feature extraction, EEG classification</span>
+            </div>
+          </div>
+
+          <!-- LangChain & LLM Tooling -->
+          <div class="skill-card tilt-card" data-category="ai">
+            <div class="skill-icon">🔗</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">LangChain & LLM APIs</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 85%;"></div></div>
+              <span class="skill-detail">Google Gemini API integration, prompt grounding, context piping</span>
+            </div>
+          </div>
+
+          <!-- React.js -->
+          <div class="skill-card tilt-card" data-category="web">
+            <div class="skill-icon">⚛️</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">React.js</span>
+                <span class="skill-level">Skilled</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 80%;"></div></div>
+              <span class="skill-detail">Component architecture, hooks, state management, responsive UI</span>
+            </div>
+          </div>
+
+          <!-- JavaScript (ES6+) -->
+          <div class="skill-card tilt-card" data-category="web">
+            <div class="skill-icon">🟨</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript (ES6+)</span>
+                <span class="skill-level">Skilled</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 82%;"></div></div>
+              <span class="skill-detail">Async/Await, DOM manipulation, modular architecture</span>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card tilt-card" data-category="programming">
+            <div class="skill-icon">☕</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Java</span>
+                <span class="skill-level">Intermediate</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 75%;"></div></div>
+              <span class="skill-detail">Object-Oriented Programming, Collections, syntax fundamentals</span>
+            </div>
+          </div>
+
+          <!-- MySQL & SQL -->
+          <div class="skill-card tilt-card" data-category="tools">
+            <div class="skill-icon">🐬</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">MySQL & Relational Databases</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 82%;"></div></div>
+              <span class="skill-detail">Schema design, normalization, CRUD operations, indexing</span>
+            </div>
+          </div>
+
+          <!-- REST APIs & Node.js -->
+          <div class="skill-card tilt-card" data-category="web">
+            <div class="skill-icon">🟢</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">REST APIs & Node.js</span>
+                <span class="skill-level">Skilled</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 78%;"></div></div>
+              <span class="skill-detail">Endpoint design, JSON payloads, middleware, client-server sync</span>
+            </div>
+          </div>
+
+          <!-- Streamlit -->
+          <div class="skill-card tilt-card" data-category="tools">
+            <div class="skill-icon">👑</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Streamlit</span>
+                <span class="skill-level">Advanced</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 88%;"></div></div>
+              <span class="skill-detail">Interactive data dashboards, AI demo UIs, custom session state</span>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card tilt-card" data-category="tools">
+            <div class="skill-icon">🐙</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Git & GitHub</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 85%;"></div></div>
+              <span class="skill-detail">Branching, merge workflows, release management, CI/CD basics</span>
+            </div>
+          </div>
+
+          <!-- Core CS: DSA & OOP -->
+          <div class="skill-card tilt-card" data-category="programming">
+            <div class="skill-icon">🏛️</div>
+            <div class="skill-info">
+              <div class="skill-header">
+                <span class="skill-name">Data Structures & OOP</span>
+                <span class="skill-level">Proficient</span>
+              </div>
+              <div class="skill-progress-bar"><div class="progress" style="--width: 80%;"></div></div>
+              <span class="skill-detail">Arrays, Linked Lists, Stacks, Queues, Inheritance, Polymorphism</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SHOWCASE -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03. Portfolio Works</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world AI systems, machine learning models, and full-stack software applications.</p>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="projects-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+          <button class="filter-btn" data-filter="ai">AI & Deep Learning (3)</button>
+          <button class="filter-btn" data-filter="web">Full-Stack Web (2)</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Enterprise RAG Chatbot -->
+          <div class="project-card tilt-card" data-category="ai">
+            <div class="project-badge">Featured AI System</div>
+            <div class="project-header">
+              <div class="project-category">Generative AI • RAG</div>
+              <h3 class="project-title">Enterprise RAG Chatbot</h3>
+            </div>
+            
+            <p class="project-description">
+              An end-to-end multi-format Retrieval-Augmented Generation system. Parses heterogeneous corporate knowledge documents, creates semantic vector embeddings, and outputs hallucination-free answers with verifiable citation links.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Indexes <strong>PDF, CSV, XLSX, TXT, DOCX</strong> into a FAISS vector database.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Uses <code>all-MiniLM-L6-v2</code> embeddings for dense semantic similarity search.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Incorporates strict grounding citations with similarity score metrics.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Responsive, dark-themed Streamlit UI featuring chat history export to TXT/PDF.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span>Python</span>
+              <span>LangChain</span>
+              <span>FAISS</span>
+              <span>Google Gemini</span>
+              <span>Streamlit</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#interactive-demo" class="project-link primary-link">
+                <span>View Simulator</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </a>
+              <span class="project-status-tag">Completed</span>
+            </div>
+          </div>
+
+          <!-- Project 2: EEG-Based Epileptic Seizure Detection -->
+          <div class="project-card tilt-card" data-category="ai">
+            <div class="project-badge badge-accent">Final Year Research Project</div>
+            <div class="project-header">
+              <div class="project-category">Deep Learning • Biosignal Analysis</div>
+              <h3 class="project-title">EEG-Based Epileptic Seizure Detection & Prediction</h3>
+            </div>
+
+            <p class="project-description">
+              A hybrid spatial-temporal deep learning pipeline designed to detect and predict oncoming epileptic seizures from raw multi-channel electroencephalogram (EEG) signals with high diagnostic reliability.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Comprehensive biosignal filtering, baseline correction, artifact removal, and spectral decomposition.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Utilized <strong>CNN</strong> for spatial feature extraction across electrode topological maps.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Integrated <strong>Bi-LSTM</strong> networks to capture long-range temporal dependencies in pre-ictal phases.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Achieved high sensitivity and specificity in automated pre-ictal seizure classification.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span>Python</span>
+              <span>Deep Learning</span>
+              <span>CNN</span>
+              <span>Bi-LSTM</span>
+              <span>Signal Processing</span>
+            </div>
+
+            <div class="project-links">
+              <span class="project-badge-pill">Academic Distinction</span>
+              <span class="project-status-tag">Validated Model</span>
+            </div>
+          </div>
+
+          <!-- Project 3: AI Resume Analyzer -->
+          <div class="project-card tilt-card" data-category="ai">
+            <div class="project-badge">Machine Learning Tool</div>
+            <div class="project-header">
+              <div class="project-category">Machine Learning • Natural Language Processing</div>
+              <h3 class="project-title">AI Resume Analyzer & ATS Scorer</h3>
+            </div>
+
+            <p class="project-description">
+              An intelligent candidate evaluation engine that inspects resumes against target job descriptions, calculates ATS (Applicant Tracking System) compatibility scores, and pinpoints missing technical keywords.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Parses resume text and extracts skill taxonomy, experience duration, and qualification entities.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Calculates weighted ATS compatibility score using cosine similarity & keyword clustering.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Generates actionable, tailored recommendations to help candidates improve interview conversion rates.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span>Python</span>
+              <span>NLP</span>
+              <span>Machine Learning</span>
+              <span>Scikit-Learn</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#interactive-demo" class="project-link primary-link">
+                <span>Try Mini ATS Tester</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+              </a>
+              <span class="project-status-tag">Utility Tool</span>
+            </div>
+          </div>
+
+          <!-- Project 4: Student Management System -->
+          <div class="project-card tilt-card" data-category="web">
+            <div class="project-badge">Full-Stack Application</div>
+            <div class="project-header">
+              <div class="project-category">Web Development • CRUD Architecture</div>
+              <h3 class="project-title">Student Management System</h3>
+            </div>
+
+            <p class="project-description">
+              A comprehensive administrative web platform built to handle academic workflows, track student profiles, manage enrollment records, and execute seamless relational CRUD operations.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Developed a responsive, interactive user interface utilizing <strong>React</strong> and modular CSS.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Engineered robust backend REST endpoints in <strong>Python</strong> for student records handling.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Designed normalized <strong>MySQL</strong> database schemas for data integrity and optimized queries.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span>React</span>
+              <span>JavaScript</span>
+              <span>Python Backend</span>
+              <span>MySQL</span>
+              <span>CSS3</span>
+            </div>
+
+            <div class="project-links">
+              <span class="project-badge-pill">Enterprise CRUD</span>
+              <span class="project-status-tag">Full-Stack</span>
+            </div>
+          </div>
+
+          <!-- Project 5: Online Food Ordering Website -->
+          <div class="project-card tilt-card" data-category="web">
+            <div class="project-badge">E-Commerce Platform</div>
+            <div class="project-header">
+              <div class="project-category">Full-Stack Web • E-Commerce</div>
+              <h3 class="project-title">Online Food Ordering Platform</h3>
+            </div>
+
+            <p class="project-description">
+              A dynamic digital ordering solution enabling customers to browse diverse culinary menus, customize cart selections, execute secure mock checkouts, and follow order statuses.
+            </p>
+
+            <div class="project-highlights">
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Constructed dynamic catalog filtering, quantity adjustment, and price calculation logic.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Created a streamlined order submission pipeline with live stateful status updates.</span>
+              </div>
+              <div class="highlight-bullet">
+                <span class="bullet-dot"></span>
+                <span>Optimized mobile-first responsiveness for fluid smartphone and desktop ordering.</span>
+              </div>
+            </div>
+
+            <div class="project-tech-stack">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Web Development</span>
+            </div>
+
+            <div class="project-links">
+              <span class="project-badge-pill">Commercial Flow</span>
+              <span class="project-status-tag">Interactive</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE INTERACTIVE DEMO SANDBOX (Showcases his real projects right in the portfolio!) -->
+    <section class="section interactive-section" id="interactive-demo">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04. Live Showcase</span>
+          <h2 class="section-title">Interactive <span class="gradient-text">Project Sandbox</span></h2>
+          <p class="section-subtitle">Test a live interactive simulation of my RAG Vector Query & ATS Matching logic right in your browser.</p>
+        </div>
+
+        <div class="demo-box tilt-card">
+          <div class="demo-tabs">
+            <button class="demo-tab-btn active" id="demo-tab-rag">⚡ RAG Vector Retrieval Simulator</button>
+            <button class="demo-tab-btn" id="demo-tab-ats">📋 ATS Resume Keyword Matcher</button>
+          </div>
+
+          <!-- TAB 1: RAG Simulator -->
+          <div class="demo-view" id="view-rag">
+            <div class="demo-grid">
+              <div class="demo-input-pane">
+                <div class="demo-pane-header">
+                  <span class="status-dot"></span>
+                  <span>FAISS Vector Database (Mock Store: 4 Indexed Docs)</span>
+                </div>
+                
+                <label for="rag-query-select" class="demo-label">Select a Sample Enterprise Query:</label>
+                <select id="rag-query-select" class="demo-select">
+                  <option value="eeg">How does the spatial-temporal model detect epileptic seizures?</option>
+                  <option value="rag">What embedding model and vector store are used in the RAG system?</option>
+                  <option value="ats">How does the ATS analyzer compute resume compatibility scores?</option>
+                  <option value="stack">What technologies does Mohan use for full-stack web applications?</option>
+                </select>
+
+                <div class="demo-custom-query">
+                  <label for="rag-custom-input" class="demo-label">Or Type Your Own Question:</label>
+                  <input type="text" id="rag-custom-input" class="demo-input" placeholder="e.g. Which deep learning layers extract spatial features?">
+                </div>
+
+                <button class="btn btn-primary" id="btn-run-rag">
+                  <span class="sparkle-icon">⚡</span>
+                  <span>Execute Vector Search & Grounding</span>
+                </button>
+              </div>
+
+              <div class="demo-output-pane">
+                <div class="demo-pane-header">
+                  <span class="tech-tag-badge">Grounding & Citations Engine</span>
+                  <span class="latency-badge" id="rag-latency">Latency: ~24ms</span>
+                </div>
+
+                <div class="rag-results-display" id="rag-results-display">
+                  <div class="rag-chunk-card">
+                    <div class="chunk-header">
+                      <span class="source-tag">📄 Source: Projects_Dataset.pdf (Chunk #04)</span>
+                      <span class="similarity-score">Similarity: 0.942</span>
+                    </div>
+                    <p class="chunk-text">
+                      "Utilized CNN for spatial feature extraction across multi-channel EEG recordings and Bi-LSTM for temporal sequence analysis to predict epileptic seizures."
+                    </p>
+                  </div>
+
+                  <div class="ai-grounded-response">
+                    <div class="ai-response-badge">
+                      <span class="ai-star">✨</span>
+                      <strong>Grounded Answer (Gemini 2.5 Flash / 3.8 Flash):</strong>
+                    </div>
+                    <p id="rag-response-text" class="ai-text">
+                      The epileptic seizure detection model utilizes a hybrid deep learning architecture. First, a <strong>Convolutional Neural Network (CNN)</strong> extracts spatial patterns across EEG channels. Subsequently, a <strong>Bidirectional Long Short-Term Memory (Bi-LSTM)</strong> network captures the temporal dynamics over sequential time steps to predict seizure onset.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: ATS Matcher -->
+          <div class="demo-view" id="view-ats" style="display: none;">
+            <div class="demo-grid">
+              <div class="demo-input-pane">
+                <div class="demo-pane-header">
+                  <span class="status-dot"></span>
+                  <span>Candidate: Jogi Mohan Krishna vs. Target Role</span>
+                </div>
+
+                <label for="ats-role-select" class="demo-label">Select Target Job Role:</label>
+                <select id="ats-role-select" class="demo-select">
+                  <option value="ai-dev">AI / Machine Learning Engineer (RAG, Python, Deep Learning)</option>
+                  <option value="fullstack">Full-Stack Software Developer (React, Python, SQL)</option>
+                  <option value="python-backend">Python Backend Developer (REST APIs, Databases)</option>
+                </select>
+
+                <div class="ats-role-description">
+                  <p class="demo-hint" id="ats-role-hint">
+                    Scans Mohan's resume against core competencies, keywords, and qualifications.
+                  </p>
+                </div>
+
+                <button class="btn btn-primary" id="btn-run-ats">
+                  <span>Calculate ATS Match Score</span>
+                </button>
+              </div>
+
+              <div class="demo-output-pane">
+                <div class="ats-score-display">
+                  <div class="score-radial-box">
+                    <div class="score-circle">
+                      <span class="score-value" id="ats-score-val">96%</span>
+                      <span class="score-sub">Match Rate</span>
+                    </div>
+                  </div>
+
+                  <div class="ats-breakdown">
+                    <h4 class="breakdown-title">Skill Match Taxonomy</h4>
+                    <div class="matched-chips" id="ats-matched-chips">
+                      <span class="chip chip-match">✓ Python</span>
+                      <span class="chip chip-match">✓ RAG Systems</span>
+                      <span class="chip chip-match">✓ LangChain</span>
+                      <span class="chip chip-match">✓ FAISS</span>
+                      <span class="chip chip-match">✓ CNN & Bi-LSTM</span>
+                      <span class="chip chip-match">✓ Vector Embeddings</span>
+                      <span class="chip chip-match">✓ Streamlit</span>
+                    </div>
+
+                    <div class="ats-recommendation-box" id="ats-recommendation-box">
+                      <div class="rec-title">💡 Actionable Recommendation:</div>
+                      <p class="rec-text">
+                        Strong alignment for high-growth engineering teams requiring both rapid LLM prototyping and solid full-stack fundamentals.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION TIMELINE -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05. Background</span>
+          <h2 class="section-title">Experience & <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Chronological record of work experience, academic milestones, and credentials.</p>
+        </div>
+
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <!-- Experience Item: Student Tribe -->
+          <div class="timeline-item tilt-card">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">Internship</span>
+                <span class="timeline-type">Paid Work Experience</span>
+              </div>
+              <h3 class="timeline-title">AI Annotation Specialist (Paid Intern)</h3>
+              <h4 class="timeline-org">Student Tribe</h4>
+              
+              <ul class="timeline-duties">
+                <li>Labeled and annotated heterogeneous multi-modal datasets (text, images, audio, and video) for supervised AI model training.</li>
+                <li>Conducted thorough quality audits to detect anomalies, labeling noise, label skew, and demographic bias in raw dataset corpuses.</li>
+                <li>Worked in close coordination with data science and ML engineering teams to iterate on model feedback loops and fine-tuning accuracy.</li>
+                <li>Contributed to streamlining annotation guidelines and standardized data processing workflows for enhanced throughput.</li>
+              </ul>
+
+              <div class="timeline-tags">
+                <span>Dataset Quality</span>
+                <span>Multimodal Annotation</span>
+                <span>ML Pipeline Feedback</span>
+                <span>Data Engineering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Item: B.Tech -->
+          <div class="timeline-item tilt-card">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">2022 – 2026</span>
+                <span class="timeline-type">Undergraduate Degree</span>
+              </div>
+              <h3 class="timeline-title">Bachelor of Technology in Computer Science & Engineering</h3>
+              <h4 class="timeline-org">Sri Vasavi Institute of Engineering and Technology, Nandamuru</h4>
+              <div class="timeline-grade">
+                <span class="grade-badge">CGPA: 7.43</span>
+              </div>
+              <p class="timeline-notes">
+                Core coursework in Data Structures, Object-Oriented Programming, Database Management Systems, Software Engineering Methodologies, and Artificial Intelligence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education Item: Intermediate -->
+          <div class="timeline-item tilt-card">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">2021 – 2022</span>
+                <span class="timeline-type">Senior Secondary</span>
+              </div>
+              <h3 class="timeline-title">Intermediate (MPC - Mathematics, Physics, Chemistry)</h3>
+              <h4 class="timeline-org">RK Junior College, Machilipatnam</h4>
+              <div class="timeline-grade">
+                <span class="grade-badge">CGPA: 6.5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Item: Secondary School -->
+          <div class="timeline-item tilt-card">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-date">2019 – 2020</span>
+                <span class="timeline-type">Secondary School Certificate (SSC)</span>
+              </div>
+              <h3 class="timeline-title">Secondary School Certificate (Class 10)</h3>
+              <h4 class="timeline-org">Z.P. High School, Guduru</h4>
+              <div class="timeline-grade">
+                <span class="grade-badge">CGPA: 8.5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Credentials Grid -->
+        <div class="certifications-block">
+          <h3 class="cert-block-title">
+            <span>Verified Certifications & Training</span>
+          </h3>
+          <div class="cert-grid">
+            <div class="cert-card tilt-card">
+              <div class="cert-icon">📱</div>
+              <div class="cert-info">
+                <h4 class="cert-title">Android Developer Virtual Internship</h4>
+                <p class="cert-issuer">Google • 2024</p>
+                <span class="cert-badge">Google Verified</span>
+              </div>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-icon">🐍</div>
+              <div class="cert-info">
+                <h4 class="cert-title">Python Professional Course</h4>
+                <p class="cert-issuer">BIST Technologies Pvt. Ltd. • 2025</p>
+                <span class="cert-badge">Industry Certified</span>
+              </div>
+            </div>
+
+            <div class="cert-card tilt-card">
+              <div class="cert-icon">☕</div>
+              <div class="cert-info">
+                <h4 class="cert-title">Java Full Stack Development</h4>
+                <p class="cert-issuer">BIST Technologies • 2025</p>
+                <span class="cert-badge">Comprehensive Program</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & CONNECT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">06. Next Steps</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in hiring me or collaborating on an engineering project? Let's talk.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Details Card -->
+          <div class="contact-card tilt-card">
+            <h3 class="contact-heading">Direct Contact Channels</h3>
+            <p class="contact-sub">
+              I am actively interviewing for <strong>Entry-Level Software Developer</strong>, <strong>AI Engineer</strong>, and <strong>Full-Stack Developer</strong> positions. Feel free to reach out directly:
+            </p>
+
+            <div class="contact-methods-list">
+              <!-- Email -->
+              <div class="contact-row">
+                <div class="contact-icon">📧</div>
+                <div class="contact-data">
+                  <span class="contact-type">Email Address</span>
+                  <a href="mailto:mohankrishnajogi123@gmail.com" class="contact-value" id="email-val">mohankrishnajogi123@gmail.com</a>
+                </div>
+                <button class="copy-btn" data-copy="mohankrishnajogi123@gmail.com" title="Copy Email">Copy</button>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-row">
+                <div class="contact-icon">📱</div>
+                <div class="contact-data">
+                  <span class="contact-type">Phone / WhatsApp</span>
+                  <a href="tel:+919392741606" class="contact-value" id="phone-val">+91 9392741606</a>
+                </div>
+                <button class="copy-btn" data-copy="+919392741606" title="Copy Phone Number">Copy</button>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-row">
+                <div class="contact-icon">📍</div>
+                <div class="contact-data">
+                  <span class="contact-type">Location</span>
+                  <span class="contact-value-static">Machilipatnam, Andhra Pradesh, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-box">
+              <span class="social-label">Professional Profiles:</span>
+              <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn linkedin-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn Profile</span>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn github-btn">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  <span>GitHub Profile</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Message / Mailto Generator Form -->
+          <div class="contact-form-card tilt-card">
+            <h3 class="contact-heading">Send a Quick Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Hiring Manager / Tech Lead" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject / Role</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Software Developer Opportunity" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-textarea" rows="4" placeholder="Hello Mohan, we came across your AI & Full-Stack portfolio..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                <span>Send via Email Client</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-text">JMK</span>
+          <span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-copy">
+          Designed & Engineered with high-performance animations & AI passion.<br>
+          © 2026 Jogi Mohan Krishna. All rights reserved.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" id="back-to-top" title="Scroll to Top">
+          <span>Back to Top</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Box -->
+  <div class="toast" id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
